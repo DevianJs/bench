@@ -1,0 +1,18 @@
+{
+    "name": "MND_Bench",
+    "lang": "es-MX",
+    "start_url": "/bench/",
+    "short_name": "Bench",
+    "description": "",
+    "background_color": "#191924",
+    "theme_color": "#09f",
+    "orientation": "portrait",
+    "display": "standalone",
+    "icons": [
+        {
+            "src": "./icon.svg",
+            "sizes": "512x512",
+            "type": "image/svg+xml"
+        }
+    ]
+}
