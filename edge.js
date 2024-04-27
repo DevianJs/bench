@@ -10,10 +10,11 @@ self.addEventListener("install", (e) => {
 });
 self.addEventListener("fetch", (e) => {
     e.respondWith((async () => {
+        const request = e.request.url.split("?").shift();
         const cache = await caches.open(CACHE)
-        const response = await cache.match(e.request);
+        const response = await cache.match(request);
         if(response) return response;
-        try {return fetch(e.request)}
+        try {return fetch(request)}
         catch (e) {return null}
     })());
 });
