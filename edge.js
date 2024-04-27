@@ -4,7 +4,7 @@ self.addEventListener("install", (e) => {
         caches.keys()
         .then(cacheNames => {
             if(!cacheNames.includes(CACHE))
-            caches.open(CACHE).then(cache => cache.addAll(["./", "./index.html", "./icon.svg", "./manifest.json"]));
+            return caches.open(CACHE).then(cache => cache.addAll(["./", "./index.html", "./icon.svg", "./manifest.json"]));
         })
     );
 });
